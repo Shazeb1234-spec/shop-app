@@ -3,6 +3,8 @@ import { Separator } from "@/components/ui/separator"
 import { SidebarTrigger } from "@/components/ui/sidebar"
 import { UnderGuidanceOf } from "./UnderGuidanceOf"
 import { ModeToggle } from "./mode-toggle"
+import { ShoppingCartIcon } from "lucide-react"
+import Link from "next/link"
 
 export function SiteHeader() {
   return (
@@ -13,8 +15,16 @@ export function SiteHeader() {
           orientation="vertical"
           className="mx-2 data-[orientation=vertical]:h-4"
         />
-        <h1 className="text-base font-medium">Sustainable Living Project</h1>
+        <ShoppingCartIcon />
+        <div className="ml-auto flex items-center gap-8"  >
+          <Link href={"#"}>Home</Link>
+          <Link href={"#"}>Products</Link>
+          <Link href={"#"}>Category</Link>
+          <Link href={"#"}>Contact</Link>
+          <Link href={"#"}>Accounts</Link>
+        </div>
         <div className="ml-auto flex items-center gap-2">
+
           <UnderGuidanceOf />
           <Button variant="ghost" asChild size="sm" className="hidden sm:flex">
             <a
