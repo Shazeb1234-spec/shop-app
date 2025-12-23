@@ -1,10 +1,13 @@
 import Hero from "@/components/hero";
+import TrendingProducts from "@/components/trending-products";
 import Image from "next/image";
 
 export default function Home() {
   return (
-  <div>
+  <div className="grid gap-30">
     <Hero  />
+
+    <TrendingProducts />
   </div>
   );
 }
