@@ -3,10 +3,10 @@ import React from 'react'
 
 const TrendingProducts = () => {
     return (
-        <div className='grid lg:grid-cols-3 mx-38'>
-            <Image src={"/placeholder.jpg"} alt="Place holder" width={400} height={800} />
-            <Image src={"/placeholder.jpg"} alt="Place holder" width={400} height={800} />
-            <Image src={"/placeholder.jpg"} alt="Place holder" width={400} height={800} />
+        <div className='grid lg:grid-cols-3 mx-38 gap-5'>
+            <Image src={"/orange.jpg"} alt="Place holder" width={800} height={800} />
+            <Image src={"/shoewwhite.jpg"} alt="Place holder" width={800} height={800} />
+            <Image src={"/girl.jpg"} alt="Place holder" width={800} height={800} />
         </div>
     )
 }
