@@ -16,7 +16,7 @@ const ProductPreview = ({Value}:{Value: ProductPreviewProps}) => {
   return (
     <div>
 
-      <Image src={Value.src||"/placeholder.jpg"} alt="placeholder" width={500} height={1000} />
+      <Image src={Value.src||"/placeholder.jpg"} alt="placeholder" width={250} height={250} />
       <h4 className='font-semibold text-2xl'>{Value.title}</h4>
       <div className='grid grid-flow-col justify-start gap-2'>
         {Array.from({length:Value.stars},(_,i) => (
