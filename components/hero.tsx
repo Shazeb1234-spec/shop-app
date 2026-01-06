@@ -4,7 +4,7 @@ import { IconArrowNarrowRight } from '@tabler/icons-react'
 
 const Hero = () => {
     return (
-        <div className="grid lg:grid-cols-2 p-10 gap-10">
+        <div className="grid lg:grid-cols-2 p-10 gap-10 bg-radial-[at_90%_90%] from-purple-200 via-purple-300 to purple-100 to 90%">
 
             <div className='mx-30 grid gap-5'>
 
