@@ -23,7 +23,7 @@ const PartnerBrand = () => {
         <div>
             <div className='grid grid-flow-col justify-center gap-20 '>
                 {Array.from({ length: brands.length}, (_, i) => (
-                    <Image src={brands[i].src} alt={brands[i].alt} height={200} width={200} />
+                    <Image key={brands[i].src} src={brands[i].src} alt={brands[i].alt} height={200} width={200} />
                 ))}
             </div>
         </div>

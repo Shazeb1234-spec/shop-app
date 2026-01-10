@@ -1,4 +1,5 @@
 import FeaturedProducts from "@/components/featured-products";
+import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import LatestProducts from "@/components/latest-products";
 import PartnerBrand from "@/components/partner-brand";
@@ -17,6 +18,7 @@ export default function Home() {
     <Sale />
     <Testimonials />
     <PartnerBrand />
+    <Footer />
     
   </div>
   );
