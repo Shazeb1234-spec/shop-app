@@ -1,8 +1,8 @@
+import ProductPreview, { ProductPreviewProps } from '@/components/product-preview'
 import React from 'react'
-import { Separator } from './ui/separator'
-import ProductPreview, { ProductPreviewProps } from './product-preview'
 
-const LatestProducts = () => {
+const Page = () => {
+
     const products: ProductPreviewProps[] = [
         {
             src: "/product-12.jpg",
@@ -22,7 +22,7 @@ const LatestProducts = () => {
             stars: 3,
             price: 30.25
         },
-         {
+        {
             src: "/product-4.jpg",
             title: "blue normal t-shirt",
             stars: 3,
@@ -46,27 +46,27 @@ const LatestProducts = () => {
             stars: 3,
             price: 30.25
         },
-         {
+        {
             src: "/product-4.jpg",
             title: "blue normal t-shirt",
             stars: 3,
             price: 30.25
         },
-
     ]
+
     return (
-        <div className='grid gap-3 align-middle justify-center '>
-            <div className='w-40 justify-self-center'>
-                <Separator className="my-4 border-7 rounded-lg" />
-            </div>
-            <h2 className='text-3xl font-extrabold text-center'>Latest Products</h2>
-            <div className='grid lg:grid-cols-4 gap-3'>
-                {Array.from({ length: products.length }, (_, i) => (
-                    <ProductPreview key={i} Value={products[i]} />
-                ))}
+
+        <div className="grid gap-30">
+            <div className='grid gap-3 align-middle justify-center '>
+                <h2 className='text-3xl font-extrabold text-left'>All Products</h2>
+                <div className='grid lg:grid-cols-4 gap-3'>
+                    {Array.from({ length: products.length }, (_, i) => (
+                        <ProductPreview key={i} Value={products[i]} />
+                    ))}
+                </div>
             </div>
         </div>
     )
 }
 
-export default LatestProducts
+export default Page

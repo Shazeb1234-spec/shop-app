@@ -17,8 +17,8 @@ export function SiteHeader() {
         />
         <ShoppingCartIcon />
         <div className="ml-auto flex items-center gap-8"  >
-          <Link href={"#"}>Home</Link>
-          <Link href={"#"}>Products</Link>
+          <Link href={"/"}>Home</Link>
+          <Link href={"/products"}>Products</Link>
           <Link href={"#"}>Category</Link>
           <Link href={"#"}>Contact</Link>
           <Link href={"#"}>Accounts</Link>
