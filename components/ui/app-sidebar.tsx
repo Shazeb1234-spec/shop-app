@@ -24,18 +24,18 @@ const data = {
   },
   navMain: [
     {
-       title: "hi",
-      url: "#about-me",
+       title: "Home",
+      url: "/",
       icon: LayoutDashboard,
     },
     {
-      title: "My",
-      url: "#my-city",
+      title: "All Products",
+      url: "/products",
       icon: ListCheck,
     },
     {
-      title: "name",
-      url: "#gallery",
+      title: "Cart",
+      url: "/cart",
       icon: ChartBar,
     },
     {

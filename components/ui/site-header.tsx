@@ -15,7 +15,10 @@ export function SiteHeader() {
           orientation="vertical"
           className="mx-2 data-[orientation=vertical]:h-4"
         />
+        <Link href={"/cart"}>
         <ShoppingCartIcon />
+        </Link>
+        
         <div className="ml-auto flex items-center gap-8"  >
           <Link href={"/"}>Home</Link>
           <Link href={"/products"}>Products</Link>
