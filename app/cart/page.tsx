@@ -1,5 +1,6 @@
 
 import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import Image from 'next/image'
@@ -118,15 +119,21 @@ const Page = () => {
         <TableBody>
           {products.map((product) => (
             <TableRow key={product.title}>
-              <TableCell className="grid grid-cols-2">
+              <TableCell className="grid grid-cols-3 gap-x-0 place-content-center h-30 place-items-start">
                 <Image src={product.src} alt={product.title} width={100} height={100} />
-                <div>
-                  <Label>{product.title}</Label>
-                  <Label>Price: {`${product.currency} ${product.price}`}</Label>
-                    <Button variant={'ghost'}>Remove</Button>
+                <div className='col-span-2'>
+                  <div className='grid mt-5 gap-0'>
+                    <Label>{product.title}</Label>
+                    <div className='grid lg:grid-cols-2'>
+                      <Label>Price: {`${product.currency} ${product.price}`}</Label>
+                      <Button variant={'destructive'} size={'sm'} color='red' >Remove</Button>
+                    </div>
+                  </div>
                 </div>
               </TableCell>
-              <TableCell>{product.quantity}</TableCell>
+              <TableCell>
+                <Input value={product.quantity} ></Input> 
+              </TableCell>
               <TableCell>{`${product.currency} ${product.subtotal}`}</TableCell>
             </TableRow>
           ))}
