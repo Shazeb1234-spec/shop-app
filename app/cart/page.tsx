@@ -2,7 +2,9 @@
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { Separator } from '@/components/ui/separator'
 import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from '@/components/ui/table'
+import { Sun } from 'lucide-react'
 import Image from 'next/image'
 import { useState } from 'react'
 
@@ -78,14 +80,16 @@ const Page = () => {
     ]
   )
 
+    const subtotal = products.reduce((sum, item) => sum + item.subtotal, 0 )
+    const tax = (subtotal * 18 ) /100
+    const total = (subtotal + tax)
 
   return (
-    <div className='container'>
+    <div className='lg:mx-auto'>
       <Table>
-        <TableCaption>A list of your products.</TableCaption>
-        <TableHeader>
+        <TableHeader className='bg-blue-400'>
           <TableRow>
-            <TableHead className='w-[450px]'>Product</TableHead>
+            <TableHead className='w-[450px] '>Product</TableHead>
             <TableHead className='w-[150px]'>Quantity</TableHead>
             <TableHead className='text-right w-[150px]'>Subtotal</TableHead>
 
@@ -109,7 +113,8 @@ const Page = () => {
               <TableCell>
                 <Input value={product.quantity} onChange={(e) => {
                   const updated = [...products]
-                  updated [index].quantity = Number(e.target.value)
+                  updated[index].quantity = Number(e.target.value)
+                  updated[index].subtotal = Number(e.target.value )* product.price
                   setProducts(updated)
                 }} type='number' ></Input>
               </TableCell>
@@ -117,11 +122,28 @@ const Page = () => {
             </TableRow>
           ))}
         </TableBody>
-        <TableFooter>
+        <TableFooter className='font-extrabold'>
+          
           <TableRow>
             <TableCell></TableCell>
+            <TableCell colSpan={2}>
+              <Separator className='my-4 border-7 rounded-lg bg-blue-400'/>
+              </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell></TableCell>
+            <TableCell>SubTotal</TableCell>
+            <TableCell className="text-right">$ {subtotal}</TableCell>
+          </TableRow>
+          <TableRow>
+             <TableCell></TableCell>
+            <TableCell>Tax</TableCell>
+            <TableCell className="text-right">$ {tax}</TableCell>
+          </TableRow>
+          <TableRow>
+             <TableCell></TableCell>
             <TableCell>Total</TableCell>
-            <TableCell className="text-right">$2,500.00</TableCell>
+            <TableCell className="text-right">$ {total}</TableCell>
           </TableRow>
         </TableFooter>
       </Table>
