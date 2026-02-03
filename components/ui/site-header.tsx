@@ -24,7 +24,7 @@ export function SiteHeader() {
           <Link href={"/products"}>Products</Link>
           <Link href={"#"}>Category</Link>
           <Link href={"#"}>Contact</Link>
-          <Link href={"#"}>Accounts</Link>
+          <Link href={"/login"}>Login</Link>
         </div>
         <div className="ml-auto flex items-center gap-2">
 

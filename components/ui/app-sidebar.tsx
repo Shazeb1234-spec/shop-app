@@ -39,8 +39,8 @@ const data = {
       icon: ChartBar,
     },
     {
-      title: "is",
-      url: "#my-favourite-sports",
+      title: "Login",
+      url: "/login",
       icon: FolderArchive,
     },
     {
