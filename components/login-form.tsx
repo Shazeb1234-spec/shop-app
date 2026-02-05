@@ -1,9 +1,10 @@
 import { cn } from '@/lib/utils'
 import React from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card'
-import { Field, FieldGroup, FieldLabel } from './ui/field'
+import { Field, FieldDescription, FieldGroup, FieldLabel } from './ui/field'
 import { Input } from './ui/input'
 import Link from 'next/link'
+import { Button } from './ui/button'
 
 const LoginForm = ({
     className,
@@ -26,10 +27,17 @@ const LoginForm = ({
                             </Field>
                             <Field>
                                 <div className='flex items-center'>
-                                <FieldLabel htmlFor='password'>Password</FieldLabel>
-                                <Link href={"#"} className='ml-auto inline-block text-sm underline-offset-4 hover:underline'>Forgot Your Password</Link>
+                                    <FieldLabel htmlFor='password'>Password</FieldLabel>
+                                    <Link href={"#"} className='ml-auto inline-block text-sm underline-offset-4 hover:underline'>Forgot Your Password</Link>
                                 </div>
                                 <Input id='password' type='password' placeholder='ABCat123' required />
+                            </Field>
+                            <Field>
+                                <Button type='submit'>Login</Button>
+                                <Button variant={"outline"}>Login with Google</Button>
+                                <FieldDescription>
+                                    Don't have a account??? <Link href={"/signup"}>Sign up</Link>
+                                </FieldDescription>
                             </Field>
                         </FieldGroup>
                     </form>

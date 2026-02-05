@@ -44,12 +44,12 @@ const data = {
       icon: FolderArchive,
     },
     {
-      title: "Me",
+      title: "Contact",
       url: "#my-favourite-book",
       icon: UsersIcon,
     },
     {
-      title: ":D",
+      title: "Account",
       url: "#my-message",
       icon: UsersRound,
     },
