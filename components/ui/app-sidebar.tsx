@@ -45,7 +45,7 @@ const data = {
     },
     {
       title: "Contact",
-      url: "#my-favourite-book",
+      url: "/contact",
       icon: UsersIcon,
     },
     {
