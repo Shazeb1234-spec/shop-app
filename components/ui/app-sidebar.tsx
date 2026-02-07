@@ -50,7 +50,7 @@ const data = {
     },
     {
       title: "Account",
-      url: "#my-message",
+      url: "/account",
       icon: UsersRound,
     },
   ],

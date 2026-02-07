@@ -24,7 +24,7 @@ export function SiteHeader() {
           <Link href={"/products"}>Products</Link>
           <Link href={"#"}>Category</Link>
           <Link href={"/contact"}>Contact</Link>
-            <Link href={"#"}>Account</Link>
+            <Link href={"/account"}>Account</Link>
              <Link href={"/signup"}>Sign Up</Link>
           <Link href={"/login"}>Login</Link>
         </div>
